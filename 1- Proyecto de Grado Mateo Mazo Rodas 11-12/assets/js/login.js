@@ -53,7 +53,13 @@ form.addEventListener('submit', async function (e) {
                 mensaje.textContent = 'El rol seleccionado no corresponde a esta cuenta.';
                 return;
             }
-            mensaje.textContent = 'Correo o contraseña incorrectos.';
+            if (res.status === 401) {
+                mensaje.textContent = 'Correo o contraseña incorrectos.';
+                return;
+            }
+            mensaje.textContent = res.status === 400
+                ? 'Completa el correo, la contraseña y el rol.'
+                : 'No se pudo iniciar sesión por un error del servidor.';
             return;
         }
 
