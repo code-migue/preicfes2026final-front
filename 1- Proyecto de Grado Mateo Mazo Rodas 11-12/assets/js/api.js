@@ -1,11 +1,11 @@
 const API = 'http://localhost:3000/api';
 
 // ── LOGIN ──────────────────────────────────────────────
-async function loginUsuario(correo, contrasena) {
+async function loginUsuario(correo, contrasena, rol) {
     const res = await fetch(`${API}/usuarios/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ Correo: correo, Contraseña: contrasena })
+        body: JSON.stringify({ Correo: correo, Contraseña: contrasena, Rol: rol })
     });
     if (!res.ok) throw await res.json();
     return res.json();

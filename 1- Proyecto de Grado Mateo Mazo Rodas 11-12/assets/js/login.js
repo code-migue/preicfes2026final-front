@@ -3,6 +3,13 @@ var RUTAS = {
     estudiante: 'Usuarios/indexUsuarios.html'
 };
 
+function normalizarRol(rol) {
+    var valor = String(rol || '').trim().toLowerCase();
+    if (valor === 'admin' || valor === 'administrador') return 'administrador';
+    if (valor === 'estudiante') return 'estudiante';
+    return '';
+}
+
 var form = document.getElementById('formLogin');
 var mensaje = document.getElementById('mensaje');
 var claveInput = document.getElementById('clave');
@@ -38,18 +45,27 @@ form.addEventListener('submit', async function (e) {
         const res = await fetch('http://localhost:3000/api/usuarios/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ Correo: correo, Contraseña: clave })
+            body: JSON.stringify({ Correo: correo, Contraseña: clave, Rol: rol })
         });
 
         if (!res.ok) {
+            if (res.status === 403) {
+                mensaje.textContent = 'El rol seleccionado no corresponde a esta cuenta.';
+                return;
+            }
             mensaje.textContent = 'Correo o contraseña incorrectos.';
             return;
         }
 
         const usuario = await res.json();
+        var rolAutorizado = normalizarRol(usuario.Rol);
+        if (!rolAutorizado || rolAutorizado !== rol) {
+            mensaje.textContent = 'El servidor no confirmó el rol de esta cuenta.';
+            return;
+        }
 
         var sesion = JSON.stringify({
-            rol: rol,
+            rol: rolAutorizado,
             nombre: usuario.NombreUsuario,
             correo: usuario.Correo,
             CodUsuario: usuario.CodUsuario
@@ -59,7 +75,7 @@ form.addEventListener('submit', async function (e) {
         localStorage.removeItem('sesion');
         (recordar ? localStorage : sessionStorage).setItem('sesion', sesion);
 
-        window.location.href = RUTAS[rol];
+        window.location.href = RUTAS[rolAutorizado];
 
     } catch (err) {
         mensaje.textContent = 'No se pudo conectar con el servidor.';
