@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PREICFES — Practica para el examen Saber 11</title>
+    <meta name="description" content="PREICFES: practica con simulacros del examen Saber 11 por áreas y mide tu progreso." />
+    <link rel="icon" href="assets/images/preicfes-favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/preicfes/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assets/css/landing.css" />
+  </head>
+  <body>
+    <!-- ======== barra de navegación ======== -->
+    <header class="barra">
+      <div class="envoltorio">
+        <div class="barra-izq">
+          <a class="btn-entrar js-entrar" href="login.html">Iniciar sesión</a>
+          <button class="hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <a class="marca" href="#inicio">
+          <img src="assets/images/logo/preicfes.svg" alt="PREICFES" />
+        </a>
+        <nav class="enlaces" aria-label="Secciones de la página">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#reto">Ponte a prueba</a>
+          <a href="#como-funciona">Cómo funciona</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ======== héroe ======== -->
+      <section id="inicio" class="heroe">
+        <div class="envoltorio">
+          <div>
+            <span class="chip"><i class="mdi mdi-check-decagram"></i> Preparación para el Saber 11</span>
+            <h1>Prepárate para el ICFES <span class="resalto">practicando de verdad</span></h1>
+            <p class="intro">PREICFES es una plataforma de simulacros por áreas para que practiques a tu ritmo, revises tus resultados y llegues al examen con más seguridad.</p>
+            <div class="cta">
+              <a class="boton boton-primario" href="#reto">Hacer el mini reto</a>
+              <a class="boton boton-secundario js-entrar" href="login.html">Iniciar sesión</a>
+            </div>
+            <div class="areas-mini" style="margin-top:28px">
+              <span><i class="mdi mdi-book-open-variant"></i> Lectura Crítica</span>
+              <span><i class="mdi mdi-calculator-variant"></i> Matemáticas</span>
+              <span><i class="mdi mdi-earth"></i> Sociales</span>
+              <span><i class="mdi mdi-flask"></i> Ciencias Naturales</span>
+              <span><i class="mdi mdi-translate"></i> Inglés</span>
+            </div>
+          </div>
+          <div class="heroe-arte">
+            <img src="assets/images/home/hero-hojas.svg" alt="Hoja de respuestas con burbujas y un lápiz" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== nosotros ======== -->
+      <section id="nosotros" class="seccion">
+        <div class="envoltorio">
+          <div class="titulo-seccion">
+            <span class="chip"><i class="mdi mdi-lightbulb"></i> Nosotros</span>
+            <h2>¿Qué es PREICFES y cómo surgió?</h2>
+          </div>
+          <div class="nosotros">
+            <div>
+              <h3>La idea</h3>
+              <p>PREICFES nació como proyecto de grado, de la necesidad de tener un lugar sencillo y gratuito para practicar el examen Saber 11 por áreas, sin depender de hojas impresas ni de plataformas complicadas. La idea es que cualquier estudiante pueda entrar, resolver un simulacro y ver en qué áreas debe reforzar más.</p>
+              <h3>Cómo funciona por dentro</h3>
+              <p>La plataforma organiza las preguntas por las cinco áreas del examen, guarda los resultados de cada simulacro y le muestra al estudiante su progreso a lo largo del tiempo, para que la práctica tenga un propósito claro.</p>
+            </div>
+            <div>
+              <h3>El equipo</h3>
+              <p>Los desarrolladores de este proyecto son: Miguel Ángel Giraldo Orrego, Oswaldo Suescun Acevedo, Mateo Mazo Rodas, Daniel felipe Perea Duque</p>
+              <div class="equipo">
+                <div class="persona">
+                  <span class="avatar">TN</span>
+                  <div><div class="nombre">PREICFES</div><div class="rol">Grado 11 · Desarrolladores de PREICFES</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== mini reto ======== -->
+      <section id="reto" class="seccion raya">
+        <div class="envoltorio">
+          <div class="titulo-seccion">
+            <span class="chip"><i class="mdi mdi-timer"></i> Ponte a prueba</span>
+            <h2>Un mini reto: 5 preguntas, una por cada área</h2>
+            <p>No necesitas iniciar sesión para intentarlo. Es solo una probadita de lo que encontrarás en los simulacros completos.</p>
+          </div>
+          <div id="reto-caja"></div>
+        </div>
+      </section>
+
+      <!-- ======== cómo funciona ======== -->
+      <section id="como-funciona" class="seccion">
+        <div class="envoltorio">
+          <div class="titulo-seccion">
+            <span class="chip"><i class="mdi mdi-chart-line"></i> Cómo funciona</span>
+            <h2>Practicar es así de simple</h2>
+          </div>
+          <div class="pasos">
+            <div class="paso">
+              <div class="numero">1</div>
+              <h3>Inicia sesión</h3>
+              <p>Entra con tu cuenta de estudiante para guardar tu progreso en cada simulacro.</p>
+            </div>
+            <div class="paso">
+              <div class="numero">2</div>
+              <h3>Elige un área</h3>
+              <p>Escoge el área que quieres practicar o resuelve un simulacro completo.</p>
+            </div>
+            <div class="paso">
+              <div class="numero">3</div>
+              <h3>Revisa tus resultados</h3>
+              <p>Mira tu puntaje y tus aciertos para saber qué reforzar antes del examen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="envoltorio pie">
+        <a class="marca" href="#inicio"><img src="assets/images/logo/preicfes.svg" alt="PREICFES" /></a>
+        <small>PREICFES, preparación para el examen Saber 11.</small>
+      </div>
+    </footer>
+
+    <script src="assets/js/landing.js"></script>
+  </body>
+</html>

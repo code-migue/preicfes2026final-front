@@ -1,0 +1,40 @@
+/* assets/css/inicio.css — estilos de la página de inicio (la misma para administrador y estudiante) */
+.inicio { padding-bottom: 24px; }
+
+/* ---- Slider ---- */
+.inicio .inicio-carrusel { border-radius: 12px; overflow: hidden; box-shadow: 0 12px 24px -4px rgba(145, 158, 171, .16), 0 0 2px rgba(145, 158, 171, .2); }
+.inicio .inicio-slide { min-height: 360px; padding: 36px 64px 56px; color: #fff; }
+.inicio .slide-azul { background: linear-gradient(120deg, #2b47d4 0%, #4a6cf7 100%); }
+.inicio .slide-violeta { background: linear-gradient(120deg, #6a3fd1 0%, #9b51e0 100%); }
+.inicio .slide-verde { background: linear-gradient(120deg, #0d7a5f 0%, #16a37f 100%); }
+.inicio .inicio-slide h2 { color: #fff; font-size: clamp(1.6rem, 2.6vw, 2.3rem); font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+.inicio .inicio-slide p { color: #fff; font-size: 1.05rem; max-width: 460px; margin-bottom: 24px; opacity: .95; }
+.inicio .inicio-slide .inicio-boton { display: inline-block; background: #fff; color: #1f2a44; font-weight: 600; padding: 12px 26px; border-radius: 8px; text-decoration: none; }
+.inicio .inicio-slide .inicio-boton:hover { background: #eef1ff; color: #1f2a44; }
+.inicio .inicio-slide img { display: block; width: 100%; max-height: 300px; object-fit: contain; }
+.inicio .carousel-indicators { margin-bottom: 14px; }
+.inicio .carousel-indicators [data-bs-target] { width: 10px; height: 10px; border-radius: 50%; border: 0; opacity: .5; }
+.inicio .carousel-indicators .active { opacity: 1; }
+.inicio .carousel-control-prev, .inicio .carousel-control-next { width: 6%; }
+
+/* ---- Secciones ---- */
+.inicio .inicio-seccion { margin-top: 48px; }
+.inicio .inicio-seccion > h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+.inicio .inicio-seccion > .inicio-sub { color: #5d657b; margin-bottom: 24px; max-width: 620px; }
+
+.inicio .tarjeta { height: 100%; background: #fff; border-radius: 10px; padding: 26px 22px; box-shadow: 0 12px 24px -4px rgba(145, 158, 171, .12), 0 0 2px rgba(145, 158, 171, .2); }
+.inicio .tarjeta h5 { font-size: 1.05rem; font-weight: 700; margin: 16px 0 8px; }
+.inicio .tarjeta p { color: #5d657b; font-size: .92rem; margin: 0; }
+.inicio .icono { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.inicio .c-azul { background: rgba(54, 92, 245, .12); color: #365cf5; }
+.inicio .c-violeta { background: rgba(155, 81, 224, .12); color: #9b51e0; }
+.inicio .c-naranja { background: rgba(245, 166, 35, .16); color: #d98200; }
+.inicio .c-verde { background: rgba(31, 170, 89, .14); color: #1a8f4c; }
+.inicio .c-rojo { background: rgba(229, 72, 77, .12); color: #d13438; }
+
+.inicio .paso .numero { width: 40px; height: 40px; border-radius: 50%; background: #365cf5; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 767.98px) {
+  .inicio .inicio-slide { padding: 28px 24px 52px; min-height: 0; }
+  .inicio .inicio-slide img { max-height: 170px; margin-top: 20px; }
+}

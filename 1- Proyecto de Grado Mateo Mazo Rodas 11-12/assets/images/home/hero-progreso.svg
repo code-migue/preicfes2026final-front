@@ -1,0 +1,31 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de barras con el progreso por área">
+  <circle cx="290" cy="185" r="160" fill="#fff" opacity=".10"/>
+  <circle cx="60" cy="90" r="6" fill="#fff" opacity=".5"/>
+  <circle cx="510" cy="300" r="5" fill="#fff" opacity=".5"/>
+  <rect x="70" y="40" width="420" height="280" rx="22" fill="#fff"/>
+  <rect x="98" y="66" width="120" height="12" rx="6" fill="#6A3FD1"/>
+  <rect x="98" y="86" width="76" height="8" rx="4" fill="#C9B8F3"/>
+  <rect x="388" y="62" width="74" height="30" rx="15" fill="#D9F5E5"/>
+  <text x="425" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1A8F4C">+18 %</text>
+  <g stroke="#ECE7FA" stroke-width="2">
+    <line x1="98" y1="150" x2="462" y2="150"/><line x1="98" y1="190" x2="462" y2="190"/>
+    <line x1="98" y1="230" x2="462" y2="230"/>
+  </g>
+  <line x1="98" y1="280" x2="462" y2="280" stroke="#B9A5EE" stroke-width="3" stroke-linecap="round"/>
+  <rect x="110" y="200" width="42" height="80" rx="8" fill="#365CF5"/>
+  <rect x="180" y="150" width="42" height="130" rx="8" fill="#9B51E0"/>
+  <rect x="250" y="176" width="42" height="104" rx="8" fill="#F5A623"/>
+  <rect x="320" y="120" width="42" height="160" rx="8" fill="#1FAA59"/>
+  <rect x="390" y="140" width="42" height="140" rx="8" fill="#E5484D"/>
+  <polyline points="131,186 201,136 271,162 341,106 411,126" fill="none" stroke="#2B2F4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fff" stroke="#2B2F4A" stroke-width="4">
+    <circle cx="131" cy="186" r="7"/><circle cx="201" cy="136" r="7"/><circle cx="271" cy="162" r="7"/>
+    <circle cx="341" cy="106" r="7"/><circle cx="411" cy="126" r="7"/>
+  </g>
+  <!-- medalla -->
+  <g transform="translate(468 290)">
+    <path d="M-16 -6 L-24 30 L0 20 L24 30 L16 -6 Z" fill="#FF7A8A"/>
+    <circle r="30" fill="#FFC53D"/><circle r="21" fill="#FFD976"/>
+    <path d="M0 -12 L3.5 -4 L12 -3 L5.5 3 L7.5 12 L0 7.5 L-7.5 12 L-5.5 3 L-12 -3 L-3.5 -4 Z" fill="#F5A623"/>
+  </g>
+</svg>

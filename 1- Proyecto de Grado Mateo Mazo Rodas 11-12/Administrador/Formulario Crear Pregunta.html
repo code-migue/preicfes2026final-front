@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/images/preicfes-favicon.svg" type="image/svg+xml" />
+  <title>Crear Pregunta | PREICFES</title>
+  <script src="../assets/js/auth.js" data-rol="administrador"></script>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/lineicons.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body>
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <aside class="sidebar-nav-wrapper">
+    <div class="navbar-logo">
+      <a href="indexAdministrador.html">
+        <img src="../assets/images/logo/preicfes.svg" alt="PREICFES" height="34" style="height:34px;width:auto" />
+      </a>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item"><a href="indexAdministrador.html"><span class="icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17.4166 7.33333C18.9383 7.33333 20.1666 8.56167 20.1666 10.0833V15.5833H16.4999V19.25H5.49992V15.5833H1.83325V10.0833C1.83325 8.56167 3.06159 7.33333 4.58325 7.33333H5.49992V2.75H16.4999V7.33333H17.4166ZM7.33325 4.58333V7.33333H14.6666V4.58333H7.33325ZM14.6666 17.4167V13.75H7.33325V17.4167H14.6666ZM16.4999 13.75H18.3333V10.0833C18.3333 9.57917 17.9208 9.16667 17.4166 9.16667H4.58325C4.07909 9.16667 3.66659 9.57917 3.66659 10.0833V13.75H5.49992V11.9167H16.4999V13.75Z" fill="currentColor"/></svg></span><span class="text">Menu Principal</span></a></li>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" data-bs-toggle="collapse" data-bs-target="#ddmenu_1" aria-expanded="false">
+            <span class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" fill="currentColor"/><path d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" fill="currentColor"/></svg></span>
+            <span class="text">Registro</span>
+          </a>
+          <ul id="ddmenu_1" class="collapse dropdown-nav">
+            <li><a href="Formulario Estudiantes.html">Estudiantes</a></li>
+            <li><a href="Formulario Usuarios.html">Usuarios</a></li>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" data-bs-toggle="collapse" data-bs-target="#ddmenu_2" aria-expanded="false">
+            <span class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" fill="currentColor"/><path d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" fill="currentColor"/></svg></span>
+            <span class="text">Crear Simulacro</span>
+          </a>
+          <ul id="ddmenu_2" class="collapse dropdown-nav">
+            <li><a href="Formulario Iniciar Simulacros.html">Crear Simulacro</a></li>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" data-bs-toggle="collapse" data-bs-target="#ddmenu_3" aria-expanded="true">
+            <span class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.74999 18.3333C12.2376 18.3333 15.1364 15.8128 15.7244 12.4941C15.8448 11.8143 15.2737 11.25 14.5833 11.25H9.99999C9.30966 11.25 8.74999 10.6903 8.74999 10V5.41666C8.74999 4.7263 8.18563 4.15512 7.50586 4.27556C4.18711 4.86357 1.66666 7.76243 1.66666 11.25C1.66666 15.162 4.83797 18.3333 8.74999 18.3333Z" fill="currentColor"/><path d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" fill="currentColor"/></svg></span>
+            <span class="text">Temas y Preguntas</span>
+          </a>
+          <ul id="ddmenu_3" class="collapse show dropdown-nav">
+            <li><a href="Formulario Agregar Temas.html">Agregar Tema</a></li>
+            <li><a href="Formulario Crear Pregunta.html" class="active">Crear Pregunta</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="overlay"></div>
+
+  <main class="main-wrapper">
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-6">
+            <div class="header-left d-flex align-items-center">
+              <div class="menu-toggle-btn mr-15">
+                <button id="menu-toggle" class="main-btn primary-btn btn-hover"><i class="lni lni-chevron-left me-2"></i> Menu</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-6">
+            <div class="header-right">
+              <div class="profile-box ml-15">
+                <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown">
+                  <div class="profile-info"><div class="info"><div class="image"><img src="../assets/images/profile/profile-image.png" alt="" /></div><div><h6 class="fw-500" data-usuario-nombre>Admin</h6><p>Administrador</p></div></div></div>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                  <li class="divider"></li>
+                  <li><a href="#0" data-logout><i class="lni lni-exit"></i> Sign Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="tab-components">
+      <div class="container-fluid">
+        <div class="title-wrapper pt-30"><h2>Crear Nueva Pregunta</h2></div>
+
+        <div class="card-style mb-30">
+          <h6 class="mb-25">Nueva Pregunta</h6>
+          <div class="select-style-1">
+            <label>Área</label>
+            <div class="select-position"><select id="selectArea"><option value="">Selecciona el Área</option></select></div>
+          </div>
+          <div class="select-style-1">
+            <label>Tema</label>
+            <div class="select-position"><select id="selectTema"><option value="">Selecciona el Tema</option></select></div>
+          </div>
+          <div class="input-style-1">
+            <label>Enunciado</label>
+            <textarea id="enunciado" placeholder="Escribe la pregunta aquí..." rows="4" style="width:100%;padding:10px;border:1px solid #e0e0e0;border-radius:6px;"></textarea>
+          </div>
+          <h6 class="mt-20 mb-15">Respuestas (marca la correcta)</h6>
+          <div id="respuestasContainer">
+            <div class="respuesta-row d-flex align-items-center gap-10 mb-10">
+              <input type="radio" name="correcta" value="0" /> 
+              <input type="text" class="form-control" placeholder="Opción A" />
+            </div>
+            <div class="respuesta-row d-flex align-items-center gap-10 mb-10">
+              <input type="radio" name="correcta" value="1" />
+              <input type="text" class="form-control" placeholder="Opción B" />
+            </div>
+            <div class="respuesta-row d-flex align-items-center gap-10 mb-10">
+              <input type="radio" name="correcta" value="2" />
+              <input type="text" class="form-control" placeholder="Opción C" />
+            </div>
+            <div class="respuesta-row d-flex align-items-center gap-10 mb-10">
+              <input type="radio" name="correcta" value="3" />
+              <input type="text" class="form-control" placeholder="Opción D" />
+            </div>
+          </div>
+          <button id="btnGuardar" class="main-btn success-btn-outline btn-hover mt-10">Guardar Pregunta</button>
+          <p id="msg" style="margin-top:10px;"></p>
+        </div>
+
+        <div class="card-style mb-30">
+          <h6 class="mb-25">Preguntas registradas</h6>
+          <div class="table-responsive">
+            <table class="table">
+              <thead><tr><th>#</th><th>Pregunta</th><th>Tema</th><th>Acciones</th></tr></thead>
+              <tbody id="tbodyPreguntas"><tr><td colspan="4">Cargando...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal editar pregunta -->
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header"><h5 class="modal-title">Editar Pregunta</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+          <div class="modal-body">
+            <input type="hidden" id="edit-id">
+            <div class="mb-3"><label class="form-label">Enunciado</label><textarea class="form-control" id="edit-enunciado" rows="3"></textarea></div>
+            <div id="edit-respuestas"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary" onclick="guardarEdicion()">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script>
+    var temasData = [];
+
+    async function init() {
+      var areas = await getAreas();
+      temasData = await getTemas();
+
+      var sel = document.getElementById('selectArea');
+      areas.forEach(function(a) {
+        var opt = document.createElement('option');
+        opt.value = a.CodArea; opt.textContent = a.NombreArea;
+        sel.appendChild(opt);
+      });
+
+      cargarTabla();
+    }
+
+    document.getElementById('selectArea').addEventListener('change', function() {
+      var selTema = document.getElementById('selectTema');
+      selTema.innerHTML = '<option value="">Selecciona el Tema</option>';
+      temasData.filter(function(t) { return t.CodArea == this.value; }, this).forEach(function(t) {
+        var opt = document.createElement('option');
+        opt.value = t.CodTema; opt.textContent = t.NombreTema;
+        selTema.appendChild(opt);
+      });
+    });
+
+    function cargarTabla() {
+      getPreguntas().then(function(data) {
+        var tbody = document.getElementById('tbodyPreguntas');
+        if (!data.length) { tbody.innerHTML = '<tr><td colspan="4">Sin registros</td></tr>'; return; }
+        tbody.innerHTML = data.map(function(p, i) {
+          var tema = temasData.find(function(t) { return t.CodTema == p.CodTema; });
+          var enunciado = (p.TextoPregunta || '').replace(/^'|'$/g, '') || '—';
+          return '<tr><td>' + (i+1) + '</td><td>' + enunciado + '</td><td>' + (tema ? tema.NombreTema : '—') + '</td>' +
+            '<td>' +
+              '<button class="btn btn-sm btn-warning me-1" onclick="abrirEditar(' + p.CodPregunta + ')">✏️ Editar</button>' +
+              '<button class="btn btn-sm btn-danger" onclick="eliminarPregunta(' + p.CodPregunta + ')">🗑️ Eliminar</button>' +
+            '</td></tr>';
+        }).join('');
+      });
+    }
+
+    init();
+
+    document.getElementById('btnGuardar').addEventListener('click', async function() {
+      var msg = document.getElementById('msg');
+      var enunciado = document.getElementById('enunciado').value.trim();
+      var codTema = document.getElementById('selectTema').value;
+      var correctaIdx = document.querySelector('input[name="correcta"]:checked');
+      var filas = document.querySelectorAll('.respuesta-row');
+      var textos = Array.from(filas).map(function(f) { return f.querySelector('input[type="text"]').value.trim(); });
+
+      if (!enunciado || !codTema) { msg.style.color='red'; msg.textContent='Selecciona tema y escribe la pregunta.'; return; }
+      if (!correctaIdx) { msg.style.color='red'; msg.textContent='Marca cuál es la respuesta correcta.'; return; }
+      if (textos.some(function(t) { return !t; })) { msg.style.color='red'; msg.textContent='Completa las 4 opciones.'; return; }
+
+      try {
+        var res = await crearPregunta({ TextoPregunta: enunciado, CodTema: codTema });
+        var codPregunta = res.id;
+        var idx = parseInt(correctaIdx.value);
+        for (var i = 0; i < textos.length; i++) {
+          await crearRespuesta({ TextoRespuesta: textos[i], Estado: i === idx ? 'Correcta' : 'Incorrecta', CodPregunta: codPregunta });
+        }
+        msg.style.color='green'; msg.textContent='Pregunta guardada con sus respuestas.';
+        document.getElementById('enunciado').value = '';
+        filas.forEach(function(f) { f.querySelector('input[type="text"]').value = ''; });
+        document.querySelectorAll('input[name="correcta"]').forEach(function(r) { r.checked = false; });
+        cargarTabla();
+      } catch(e) { msg.style.color='red'; msg.textContent='Error al guardar.'; }
+    });
+
+    async function abrirEditar(codPregunta) {
+      document.getElementById('edit-id').value = codPregunta;
+      var res = await fetch('http://localhost:3000/api/preguntas/' + codPregunta);
+      var p = await res.json();
+      document.getElementById('edit-enunciado').value = (p.TextoPregunta || '').replace(/^\'|\'$/g, '');
+
+      var res2 = await fetch('http://localhost:3000/api/respuestas');
+      var todas = await res2.json();
+      var resps = todas.filter(function(r) { return r.CodPregunta === codPregunta; });
+
+      document.getElementById('edit-respuestas').innerHTML = resps.map(function(r) {
+        var estado = (r.Estado || '').replace(/^\'|\'$/g, '');
+        return '<div class="mb-2 d-flex align-items-center gap-2">' +
+          '<input type="radio" name="correcta" value="' + r.CodRespuesta + '"' + (estado === 'Correcta' ? ' checked' : '') + '>' +
+          '<input type="text" class="form-control" id="resp-' + r.CodRespuesta + '" value="' + (r.TextoRespuesta || '') + '">' +
+          '</div>';
+      }).join('');
+
+      new bootstrap.Modal(document.getElementById('modalEditar')).show();
+    }
+
+    async function guardarEdicion() {
+      var codPregunta = document.getElementById('edit-id').value;
+      var enunciado = document.getElementById('edit-enunciado').value.trim();
+      if (!enunciado) return alert('El enunciado no puede estar vacío.');
+
+      await fetch('http://localhost:3000/api/preguntas/' + codPregunta, {
+        method: 'PUT', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ TextoPregunta: enunciado })
+      });
+
+      var correctaId = document.querySelector('input[name="correcta"]:checked')?.value;
+      var inputs = document.querySelectorAll('#edit-respuestas input[type="text"]');
+      for (var inp of inputs) {
+        var rid = inp.id.replace('resp-', '');
+        var estado = String(rid) === String(correctaId) ? 'Correcta' : 'Incorrecta';
+        await fetch('http://localhost:3000/api/respuestas/' + rid, {
+          method: 'PUT', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ TextoRespuesta: inp.value.trim(), Estado: estado })
+        });
+      }
+      bootstrap.Modal.getInstance(document.getElementById('modalEditar')).hide();
+      cargarTabla();
+    }
+
+    async function eliminarPregunta(codPregunta) {
+      if (!confirm('¿Eliminar esta pregunta y sus respuestas?')) return;
+      var res = await fetch('http://localhost:3000/api/respuestas');
+      var todas = await res.json();
+      var resps = todas.filter(function(r) { return r.CodPregunta === codPregunta; });
+      for (var r of resps) {
+        await fetch('http://localhost:3000/api/respuestas/' + r.CodRespuesta, { method: 'DELETE' });
+      }
+      await fetch('http://localhost:3000/api/preguntas/' + codPregunta, { method: 'DELETE' });
+      cargarTabla();
+    }
+  </script>
+</body>
+</html>

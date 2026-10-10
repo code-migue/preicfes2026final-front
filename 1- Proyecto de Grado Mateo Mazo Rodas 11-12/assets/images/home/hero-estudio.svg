@@ -1,0 +1,35 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Computador con una pregunta de opción múltiple y un reloj">
+  <circle cx="280" cy="190" r="165" fill="#fff" opacity=".10"/>
+  <circle cx="60" cy="60" r="6" fill="#fff" opacity=".5"/>
+  <circle cx="500" cy="320" r="5" fill="#fff" opacity=".5"/>
+  <!-- portátil -->
+  <rect x="90" y="52" width="350" height="230" rx="16" fill="#1F2A44"/>
+  <rect x="104" y="66" width="322" height="202" rx="8" fill="#fff"/>
+  <rect x="126" y="86" width="190" height="12" rx="6" fill="#0D7A5F"/>
+  <rect x="126" y="106" width="250" height="8" rx="4" fill="#B7DED2"/>
+  <g>
+    <circle cx="140" cy="146" r="10" fill="none" stroke="#9CCFC0" stroke-width="3"/>
+    <rect x="162" y="141" width="150" height="10" rx="5" fill="#DDEFE9"/>
+    <circle cx="140" cy="182" r="10" fill="#16A37F"/>
+    <path d="M135 182l3.5 3.5L146 178" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="162" y="177" width="190" height="10" rx="5" fill="#BFE6DA"/>
+    <circle cx="140" cy="218" r="10" fill="none" stroke="#9CCFC0" stroke-width="3"/>
+    <rect x="162" y="213" width="120" height="10" rx="5" fill="#DDEFE9"/>
+  </g>
+  <path d="M50 282h430l-26 24a14 14 0 0 1-10 4H86a14 14 0 0 1-10-4z" fill="#CFD6EA"/>
+  <rect x="230" y="282" width="70" height="8" rx="4" fill="#AEB8D6"/>
+  <!-- reloj / temporizador -->
+  <g transform="translate(456 92)">
+    <circle r="58" fill="#fff"/>
+    <circle r="46" fill="none" stroke="#E4F1EC" stroke-width="9"/>
+    <circle r="46" fill="none" stroke="#16A37F" stroke-width="9" stroke-linecap="round" stroke-dasharray="180 289" transform="rotate(-90)"/>
+    <line x1="0" y1="0" x2="0" y2="-26" stroke="#1F2A44" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="18" y2="10" stroke="#1F2A44" stroke-width="5" stroke-linecap="round"/>
+    <circle r="5" fill="#FFC53D"/>
+  </g>
+  <!-- estrellas -->
+  <g fill="#FFC53D">
+    <path d="M60 210l4 9 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z"/>
+    <path d="M500 200l3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1z"/>
+  </g>
+</svg>

@@ -1,0 +1,150 @@
+/* assets/css/login.css — pantalla de inicio de sesión de PREICFES */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/preicfes/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  --azul-noche: #0a1f66;
+  --azul: #1f45d6;
+  --azul-oscuro: #1636a8;
+  --amarillo: #ffd23f;
+  --tinta: #12183a;
+  --gris: #5b6480;
+  --borde: #d5dbea;
+  --suave: #eef2ff;
+  --error: #b42318;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  color: var(--tinta);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(400px, 1fr);
+  min-height: 100vh;
+}
+
+/* ---------- Panel de arte (la parte llamativa) ---------- */
+.arte {
+  position: relative;
+  overflow: hidden;
+  background: var(--azul-noche);
+  color: #fff;
+  padding: 44px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+}
+.arte #burbujas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.arte .logo, .arte .mensaje { position: relative; z-index: 1; }
+.arte .logo { height: 44px; width: auto; display: block; }
+.arte h2 {
+  margin: 0 0 16px;
+  max-width: 11em;
+  font-size: clamp(2.1rem, 3.6vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+.arte p { margin: 0; max-width: 24em; font-size: 1.1rem; line-height: 1.5; color: #c9d2f3; }
+
+.relleno {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: marcar .5s cubic-bezier(.2, .8, .2, 1) both;
+}
+.sin-animacion .relleno { animation: none; }
+@keyframes marcar {
+  from { opacity: 0; transform: scale(.35); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- Panel del formulario (la parte tranquila) ---------- */
+.acceso { display: flex; flex-direction: column; padding: 48px 56px 28px; background: #fff; }
+.caja { margin: auto; width: 100%; max-width: 400px; }
+.caja h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 2.4vw, 2.3rem); font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+.caja .sub { margin: 0 0 28px; color: var(--gris); line-height: 1.5; }
+
+fieldset { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+legend, .campo label { font-size: .9rem; font-weight: 600; padding: 0; margin-bottom: 8px; display: block; }
+
+.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rol { position: relative; display: block; cursor: pointer; }
+.rol input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.opcion {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 12px;
+  border: 1.5px solid var(--borde);
+  border-radius: 12px;
+  font-weight: 600; font-size: .95rem;
+  color: var(--gris);
+  transition: border-color .15s, background-color .15s, color .15s;
+}
+.opcion svg { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.opcion .punto { margin-left: auto; width: 18px; height: 18px; flex: none; border-radius: 50%; border: 2px solid var(--borde); transition: background-color .15s, border-color .15s; }
+.rol:hover .opcion { border-color: #b3bfe6; }
+.rol input:checked + .opcion { border-color: var(--azul); background: var(--suave); color: var(--azul); }
+.rol input:checked + .opcion .punto {
+  border-color: var(--azul); background: var(--azul) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+}
+.rol input:focus-visible + .opcion { outline: 3px solid #9db4ff; outline-offset: 2px; }
+
+.campo { margin-bottom: 18px; }
+.campo input {
+  width: 100%; height: 50px; padding: 0 14px;
+  font: inherit; font-size: 1rem; color: var(--tinta);
+  border: 1.5px solid var(--borde); border-radius: 10px; background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+.campo input::placeholder { color: #98a0b8; }
+.campo input:focus { outline: none; border-color: var(--azul); box-shadow: 0 0 0 4px rgba(31, 69, 214, .14); }
+.clave-wrap { position: relative; }
+.clave-wrap input { padding-right: 88px; }
+.ver {
+  position: absolute; right: 6px; top: 6px; height: 38px; padding: 0 12px;
+  font: inherit; font-size: .88rem; font-weight: 600; color: var(--azul);
+  background: transparent; border: 0; border-radius: 8px; cursor: pointer;
+}
+.ver:hover { background: var(--suave); }
+.ver:focus-visible { outline: 3px solid #9db4ff; }
+
+.recordar { display: flex; align-items: center; gap: 10px; margin: 4px 0 20px; font-size: .92rem; color: var(--gris); cursor: pointer; }
+.recordar input { width: 18px; height: 18px; accent-color: var(--azul); margin: 0; }
+
+.error { min-height: 1.3em; margin: 0 0 14px; font-size: .92rem; font-weight: 500; color: var(--error); }
+
+.entrar {
+  width: 100%; height: 52px;
+  font: inherit; font-size: 1.02rem; font-weight: 600; color: #fff;
+  background: var(--azul); border: 0; border-radius: 12px; cursor: pointer;
+  transition: background-color .15s, transform .1s;
+}
+.entrar:hover { background: var(--azul-oscuro); }
+.entrar:active { transform: translateY(1px); }
+.entrar:focus-visible { outline: 3px solid #9db4ff; outline-offset: 3px; }
+
+.pie { margin: 28px 0 0; text-align: center; font-size: .85rem; color: var(--gris); }
+
+/* ---------- Celular y pantallas angostas ---------- */
+@media (max-width: 899.98px) {
+  .pagina { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .arte { min-height: 190px; padding: 26px 24px; }
+  .arte .mensaje { display: none; }
+  .acceso { padding: 32px 24px 24px; }
+}
+
+.volver { align-self: flex-start; font-size: .92rem; font-weight: 600; color: var(--azul); text-decoration: none; padding: 6px 0; }
+.volver:hover { text-decoration: underline; }
+.volver:focus-visible { outline: 3px solid #9db4ff; outline-offset: 3px; border-radius: 4px; }
+.arte .logo-enlace { position: relative; z-index: 1; display: block; }
